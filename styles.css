@@ -1,0 +1,82 @@
+body {
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+#calc {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#total,
+#display,
+#bottom,
+#op,
+#pad {
+    max-width: 300px;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#total,
+#display {
+    background-color: white;
+    line-height: 1;
+    min-height: 20px;
+    max-width: 240px;
+    min-width: 240px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+#clear,
+#compute,
+.op,
+.number {
+    padding: 20px;
+    margin: 10px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.op {
+    width: calc(25% - 60px);
+}
+
+.number {
+    width: calc(33.33% - 60px);
+}
+
+#compute,
+#clear {
+    width: calc(50% - 60px);
+}
+
+
+#compute:hover,
+#clear:hover,
+.op:hover,
+.number:hover {
+    background-color: grey;
+}
+
+#compute:active,
+#clear:active,
+.op:active,
+.number:active {
+    background-color: red;
+}
